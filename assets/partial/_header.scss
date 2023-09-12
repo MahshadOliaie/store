@@ -28,6 +28,7 @@
             position: relative;
             padding-bottom: 10px;
             overflow: hidden;
+            cursor: pointer;
             transition: 500ms;
 
             &:not(#login):hover::after{

@@ -1,0 +1,48 @@
+
+
+.carts{
+    margin-top: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1009;
+    background-color: white;
+   
+
+    &__cart{
+        width: 100%;
+        padding: 5%;
+        padding-left: 10%;
+        border-bottom: 1.5px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &__image{
+            width: 30%;
+        }
+
+        &__about{
+            width: 70%;
+
+
+            &__remove{
+                border: none;
+                border-radius: 30px;
+                padding: 10px 15px;
+                background-color: rgb(0, 81, 73);
+                color: white;
+                font-size: 11px;
+                cursor: pointer;
+                transition: 300ms;
+            
+                &:hover{
+                    transform: scale(1.05);
+                    transition: 300ms;
+                }
+            }
+        }
+
+       
+    }
+}

@@ -2,6 +2,11 @@
 
 
 function render(data) {
+    root.classList.remove("carts")
+    root.classList.remove("showProduct");
+    root.classList.add("allProducts");
+
+    
     let template = data.map(product => {
         const { title, image, price, id } = product;
 
@@ -20,13 +25,15 @@ function render(data) {
     root.innerHTML = template;
 
 
-    root.classList.remove("showProduct");
-    root.classList.add("allProducts");
 }
 
 
 
 function showProduct(data) {
+    root.classList.add("showProduct");
+    root.classList.remove("allProducts");
+
+
     const { title, image, price, category, rating , description } = data;
 
     root.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="back" height="1em" viewBox="0 0 320 512" onclick="products()"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
@@ -39,14 +46,21 @@ function showProduct(data) {
     <p class="root__aboutProduct__categoryProduct">category: ${category}</p>
     <p class="root__aboutProduct__ratingProduct">rate: ${rating.rate}</p>
     <p class="root__aboutProduct__priceProduct">price: ${price} $</p>
-    <button class="root__aboutProduct__shop">ADD</button>
+    <button class="root__aboutProduct__shop">ADD TO CART</button>
 </div>`;
 
-    root.classList.add("showProduct");
-    root.classList.remove("allProducts");
+  
 
 }
 
 
 
+
+
+
 products();
+
+
+
+cart.addEventListener("click" , cartReq)
+home.addEventListener("click" , products)
