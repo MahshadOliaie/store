@@ -12,9 +12,7 @@ function render(data) {
     
         <div class="root__card__about">
             <h3 class="root__card__about__title">${title}</h3>
-            <p class="root__card__about__category">category: ${category}</p>
-            <p class="root__card__about__rating">rate: ${rating.rate}</p>
-            <p class="root__card__about__price">price: ${price} $</p>
+            <p class="root__card__about__price">${price} $</p>
         </div>
     </div>`
     }).join("");
