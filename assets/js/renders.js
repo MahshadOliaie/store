@@ -3,7 +3,7 @@
 
 function render(data) {
     let template = data.map(product => {
-        const { title, image, price, category, rating ,id } = product;
+        const { title, image, price, id } = product;
 
         return `<div class="root__card" onclick="products(${id})">
         <div class="root__card__image">
@@ -18,6 +18,10 @@ function render(data) {
     }).join("");
 
     root.innerHTML = template;
+
+
+    root.classList.remove("showProduct");
+    root.classList.add("allProducts");
 }
 
 
@@ -25,7 +29,8 @@ function render(data) {
 function showProduct(data) {
     const { title, image, price, category, rating , description } = data;
 
-    root.innerHTML = `<div class="root__mainImg">
+    root.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="back" height="1em" viewBox="0 0 320 512" onclick="products()"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+    <div class="root__mainImg">
     <img src="${image}" alt="">
 </div>
 <div class="root__aboutProduct">

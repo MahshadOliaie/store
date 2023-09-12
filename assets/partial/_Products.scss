@@ -47,7 +47,7 @@
         transition: 500ms;
     
         &:hover img{
-            transform: scale(1.05);
+            transform: scale(1.07);
             transition: 500ms;
         }
     
@@ -130,9 +130,15 @@
 }
 
 
+.back{
+    display: none;
+}
+
+
 
 
 .showProduct {
+    margin-top: 60px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -147,6 +153,25 @@
     @media screen and (max-width:750px) {
         flex-direction: column;
         height: auto;
+    }
+
+
+    & .back{
+        display: inline-block;
+        fill: black;
+        position: absolute;
+        top: 20px;
+        left: 3%;
+        font-size: 30px;
+        width: 50px;
+        transition: 500ms;
+        cursor: pointer;
+
+        &:hover{
+            left: 2%;
+            transition: 500ms;
+        }
+
     }
     
 }
