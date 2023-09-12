@@ -5,8 +5,9 @@ function render(data) {
     root.classList.remove("carts")
     root.classList.remove("showProduct");
     root.classList.add("allProducts");
+    document.querySelector(".menu").classList.remove("show");
 
-    
+
     let template = data.map(product => {
         const { title, image, price, id } = product;
 
@@ -63,4 +64,9 @@ products();
 
 
 cart.addEventListener("click" , cartReq)
-home.addEventListener("click" , products)
+cartMenu.addEventListener("click" , cartReq)
+
+
+bars.addEventListener("click" , function(){
+    document.querySelector(".menu").classList.toggle("show")
+})
