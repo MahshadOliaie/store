@@ -1,0 +1,136 @@
+.allProducts {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin: 5% 0;
+    gap: 15px;
+
+    @media screen and (max-width:950px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width:700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width:450px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+.root{
+    & img {
+        width: 60%;
+        margin-bottom: 20px;
+        transition: 500ms;
+    }
+
+    &__card {
+        border: 1px solid rgba(0, 0, 0, 0.368);
+        padding: 2% 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 1px .5rem rgba(0, 0, 0, 0.336);
+        cursor: pointer;
+        transition: 500ms;
+    
+        &:hover img{
+            transform: scale(1.05);
+            transition: 500ms;
+        }
+    
+    
+        &:hover {
+            box-shadow: 1px 1px .5rem rgba(0, 0, 0, 0.799);
+            transition: 500ms;
+        }
+
+        
+    
+        &__image {
+            width: 100%;
+            height: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+        }
+    
+    
+        &__about {
+            width: 100%;
+            padding: 0 2%;
+    
+            &__title {
+                font-size: 16px;
+            }
+        }
+    
+        
+    }
+
+
+
+    &__mainImg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    &__aboutProduct{
+        width: 100%;
+        position: relative;
+
+
+        &__shop{
+            border: none;
+            border-radius: 30px;
+            padding: 10px 15px;
+            background-color: rgb(211, 211, 211);
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            transition: 300ms;
+        
+            &:hover{
+                background-color: rgb(0, 81, 73);
+                color: white;
+                transform: scale(1.05);
+                transition: 300ms;
+            }
+        }
+
+        &__priceProduct{
+            margin-bottom: 0;
+        }
+        
+    }
+    
+    
+}
+
+
+
+
+.showProduct {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+
+    @media screen and (max-width:750px) {
+        flex-direction: column;
+        height: auto;
+    }
+    
+}
