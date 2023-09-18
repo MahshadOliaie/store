@@ -1,17 +1,18 @@
 
 
-function products(id) {
+function products(id , firstPage) {
     if (id) {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(Response => Response.json())
-            .then(data => showProduct(data));
+            .then(data => showProduct(data , firstPage));
     }
     else {
         fetch(`https://fakestoreapi.com/products`)
             .then(Response => Response.json())
-            .then(data => render(data));
+            .then(data => render(data , firstPage));
     }
 
+    isFirstPage = firstPage;
 
 }
 

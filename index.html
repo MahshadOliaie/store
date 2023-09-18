@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fake store api</title>
-    <script src="./assets/js/requests.js"></script>
+    <title>fake store api</title> 
+    <script src="./assets/js/requests.js" defer></script>
     <script src="./assets/js/domNodes.js" defer></script>
     <script src="./assets/js/renders.js" defer></script>
-    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/cart.js" defer></script>
+    <script src="./assets/js/showAll.js" defer></script>
+   
     <link rel="stylesheet" href="./assets/css/main.min.css">
 </head>
 
@@ -25,25 +27,37 @@
         </svg>
 
         <nav class="header__nav">
-            <p onclick="products()">HOME</p>
+            <p onclick="products(null , true)">HOME</p>
             <p>CATEGORY</p>
-            <p id="cart">CART</p>
+            <div class="cartPack">
+                <p id="cart">CART </p>
+                <div class="cartNumber"></div>
+            </div>
             <p id="login">LOG IN</p>
         </nav>
     </header>
 
     <section class="slider"></section>
 
+
     <section class="root">
     </section>
 
+    <div class="showAll">show more</div>
+
 
     <section class="menu">
-         <p onclick="products()">HOME</p>
-            <p>CATEGORY</p>
-            <p id="cartMenu">CART</p>
-            <p id="loginMenu">LOG IN</p>
+        <p onclick="products(null , true)">HOME</p>
+        <p>CATEGORY</p>
+        <p id="cartMenu">CART
+        <div class="cartNumber"></div>
+        </p>
+        <p id="loginMenu">LOG IN</p>
     </section>
+
+
+    <section class="allProducts all"></section>
+
 </body>
 
 </html>

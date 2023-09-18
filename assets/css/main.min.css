@@ -6,8 +6,32 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.862);
+  background-color: #f2f2f2;
   position: relative;
+}
+
+.showAll {
+  width: 10%;
+  padding: 10px 15px;
+  margin: 0 auto 5% auto;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #dd9853;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.showAll:hover {
+  width: 12%;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .allProducts {
@@ -17,7 +41,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5% 0;
+  margin: 5% 0 2%;
   gap: 15px;
 }
 @media screen and (max-width: 950px) {
@@ -51,7 +75,6 @@ body {
 }
 .root__card {
   background-color: rgb(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.368);
   padding: 2% 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,8 +89,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.336);
-          box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.336);
   cursor: pointer;
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -79,8 +100,8 @@ body {
   transition: 500ms;
 }
 .root__card:hover {
-  -webkit-box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.799);
-          box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.799);
+  -webkit-box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.125);
+          box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.125);
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -134,18 +155,17 @@ body {
 }
 .root__aboutProduct__shop {
   border: none;
-  border-radius: 30px;
   padding: 10px 15px;
-  background-color: rgb(211, 211, 211);
+  background-color: #f2f2f2;
   position: absolute;
   right: 10%;
   bottom: 0;
+  cursor: pointer;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 .root__aboutProduct__shop:hover {
-  background-color: rgb(0, 81, 73);
-  color: white;
+  background-color: #dd9853;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-transition: 300ms;
@@ -204,13 +224,13 @@ body {
 .slider {
   width: 100%;
   height: 50vh;
-  background-color: white;
+  background: linear-gradient(45deg, rgb(22, 22, 22), rgb(92, 92, 92));
 }
 
 .header {
   width: 100%;
   height: 60px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(21, 21, 21);
   position: sticky;
   top: 0;
   display: -webkit-box;
@@ -251,12 +271,15 @@ body {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
+.header__nav p:not(#login):hover {
+  color: #dd9853;
+}
 .header__nav p:not(#login):hover::after {
   content: "";
   width: 100%;
   height: 1px;
   position: absolute;
-  background-color: white;
+  background-color: #dd9853;
   bottom: 0;
   left: -100%;
   -webkit-animation: navAfter 500ms forwards;
@@ -288,8 +311,9 @@ body {
   cursor: pointer;
 }
 #login:hover {
-  background-color: white;
+  background-color: #dd9853;
   color: black;
+  border-color: black;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -355,6 +379,32 @@ body {
   display: flex;
 }
 
+.cartNumber {
+  width: 20px;
+  height: 20px;
+  background-color: #dd9853;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  font-weight: 600;
+}
+
+.cartPack {
+  position: relative;
+  margin-right: 15px;
+}
+
 .carts {
   margin-top: 60px;
   width: 100%;
@@ -407,11 +457,9 @@ body {
 }
 .carts__cart__about__remove {
   border: none;
-  border-radius: 30px;
   padding: 10px 15px;
-  background-color: rgb(0, 81, 73);
-  color: white;
-  font-size: 11px;
+  background-color: #dd9853;
+  font-size: 12px;
   cursor: pointer;
   -webkit-transition: 300ms;
   transition: 300ms;

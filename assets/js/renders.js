@@ -1,17 +1,21 @@
 
 
 
-function render(data) {
+function render(data, firstPage) {
     root.classList.remove("carts")
     root.classList.remove("showProduct");
     root.classList.add("allProducts");
     document.querySelector(".menu").classList.remove("show");
 
 
+    if (firstPage) {
+        data = data.slice(0, 4)
+    }
+
     let template = data.map(product => {
         const { title, image, price, id } = product;
 
-        return `<div class="root__card" onclick="products(${id})">
+        return `<div class="root__card" onclick="products(${id} , ${firstPage})">
         <div class="root__card__image">
             <img src="${image}" alt="">
         </div>
@@ -30,14 +34,14 @@ function render(data) {
 
 
 
-function showProduct(data) {
+function showProduct(data, firstPage) {
     root.classList.add("showProduct");
     root.classList.remove("allProducts");
 
 
-    const { title, image, price, category, rating , description } = data;
+    const { title, image, price, category, rating, description } = data;
 
-    root.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="back" height="1em" viewBox="0 0 320 512" onclick="products()"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+    root.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="back" height="1em" viewBox="0 0 320 512" onclick="products(null ,${firstPage})"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
     <div class="root__mainImg">
     <img src="${image}" alt="">
 </div>
@@ -50,7 +54,7 @@ function showProduct(data) {
     <button class="root__aboutProduct__shop">ADD TO CART</button>
 </div>`;
 
-  
+
 
 }
 
@@ -59,14 +63,33 @@ function showProduct(data) {
 
 
 
-products();
+products(null, true);
 
 
 
-cart.addEventListener("click" , cartReq)
-cartMenu.addEventListener("click" , cartReq)
+function cartNumberfn() {
+    fetch(`https://fakestoreapi.com/carts`)
+        .then(Response => Response.json())
+        .then(carts => length(carts));
+
+    function length(carts) {
+        cartCount.textContent = carts.length
+    }
+
+}
+
+cartNumberfn()
 
 
-bars.addEventListener("click" , function(){
+
+
+
+
+cart.addEventListener("click", cartReq)
+cartMenu.addEventListener("click", cartReq)
+
+
+bars.addEventListener("click", function () {
     document.querySelector(".menu").classList.toggle("show")
 })
+
