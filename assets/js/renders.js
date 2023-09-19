@@ -7,7 +7,7 @@ function render(data, firstPage) {
     root.classList.add("allProducts");
     document.querySelector(".menu").classList.remove("show");
 
-
+    debugger
     if (firstPage) {
         data = data.slice(0, 4)
     }
@@ -70,11 +70,11 @@ products(null, true);
 
 
 
+function reload() {
+    window.location.reload(true);
+}
 
 
-
-cart.addEventListener("click", cartReq)
-cartMenu.addEventListener("click", cartReq)
 
 
 bars.addEventListener("click", function () {

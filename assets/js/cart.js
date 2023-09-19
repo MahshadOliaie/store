@@ -1,10 +1,12 @@
 
 
 function cartFn(carts, all) {
+    debugger
     document.querySelector(".menu").classList.remove("show")
     let ids = [];
     carts.map(item => ids.push(item.id));
     all = all.filter(obj => ids.includes(obj.id));
+    root = document.querySelector(".root");
     root.classList.remove("allProducts")
     root.classList.remove("showProduct")
     root.classList.add("carts")

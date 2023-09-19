@@ -13,10 +13,10 @@ function pageStatefn() {
     </svg>
 
     <nav class="header__nav">
-        <p onclick="products(null , true)">HOME</p>
+        <p onclick="reload()">HOME</p>
         <p>CATEGORY</p>
         <div class="cartPack">
-            <p id="cart">CART </p>
+            <p id="cart" onclick="cartReq()">CART </p>
             <div class="cartNumber">${cartLength}</div>
         </div>
         <p id="login">LOG IN</p>
@@ -24,9 +24,9 @@ function pageStatefn() {
 </header>
 
 <section class="menu">
-        <p onclick="products(null , true)">HOME</p>
+        <p onclick="reload()">HOME</p>
         <p>CATEGORY</p>
-        <p id="cartMenu">CART
+        <p id="cartMenu" onclick="cartReq()">CART
         <div class="cartNumber"></div>
         </p>
         <p id="loginMenu">LOG IN</p>

@@ -1,7 +1,6 @@
 
 
 function products(id, firstPage) {
-    console.trace("call api")
     if (id) {
         return fetch(`https://fakestoreapi.com/products/${id}`)
             .then(Response => Response.json())
@@ -25,7 +24,7 @@ function products(id, firstPage) {
 
 function cartReq() {
     let all = [];
-
+    
     fetch(`https://fakestoreapi.com/products`)
         .then(Response => Response.json())
         .then(data => all = data);
