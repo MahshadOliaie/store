@@ -75,14 +75,23 @@ function reload() {
 }
 
 
+function showList(){
+    document.querySelector(".categoryList").classList.toggle("show")
+}
+
 
 
 bars.addEventListener("click", function () {
     document.querySelector(".menu").classList.toggle("show")
+    document.querySelector(".categoryList").classList.remove("show")
 })
 
 
-category.addEventListener("click", function () {
-    document.querySelector(".categoryList").classList.toggle("show")
-})
+for (const item of categoryMenu) {
+    item.addEventListener("click", function () {
+        document.querySelector(".categoryList").classList.add("categoryListMenu");
+    }
+    )
+}
+
 

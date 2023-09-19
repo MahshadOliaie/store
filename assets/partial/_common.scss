@@ -12,7 +12,7 @@ body {
 }
 
 .showAll{
-    width: 10%;
+    width: 130px;
     padding: 10px 15px;
     margin: 0 auto 5% auto;
     cursor: pointer;
@@ -23,7 +23,7 @@ body {
     transition: 500ms;
 
     &:hover{
-        width: 12%;
+        width: 160px;
         transition: 500ms;
     }
 }

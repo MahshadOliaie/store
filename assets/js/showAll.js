@@ -14,7 +14,7 @@ function pageStatefn() {
 
     <nav class="header__nav">
         <p onclick="reload()">HOME</p>
-        <p onclick="getCategories()">CATEGORY</p>
+        <p onclick="getCategories()" class="category">CATEGORY</p>
         <div class="cartPack">
             <p id="cart" onclick="cartReq()">CART </p>
             <div class="cartNumber">${cartLength}</div>
@@ -25,13 +25,20 @@ function pageStatefn() {
 
 <section class="menu">
         <p onclick="reload()">HOME</p>
-        <p onclick="getCategories()">CATEGORY</p>
+        <p onclick="getCategories()" class="categoryMenu">CATEGORY</p>
         <p id="cartMenu" onclick="cartReq()">CART
         <div class="cartNumber"></div>
         </p>
         <p id="loginMenu">LOG IN</p>
     </section>
+
+
+    <section class="categoryList">
+    </section>
 `+ template;
+
+    categoryList = document.querySelector(".categoryList")
+    categoryMenu = document.querySelectorAll(".categoryMenu")
 
 }
 

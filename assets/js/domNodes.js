@@ -7,5 +7,6 @@ let cartLength;
 let showAll = document.querySelector(".showAll");
 let pageState = document.querySelector(".all");
 let isFirstPage;
-let category = document.getElementById("category");
+let category = document.querySelectorAll(".category");
 let categoryList = document.querySelector(".categoryList")
+let categoryMenu = document.querySelectorAll(".categoryMenu")

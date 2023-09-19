@@ -11,7 +11,7 @@ body {
 }
 
 .showAll {
-  width: 10%;
+  width: 130px;
   padding: 10px 15px;
   margin: 0 auto 5% auto;
   cursor: pointer;
@@ -29,7 +29,7 @@ body {
   transition: 500ms;
 }
 .showAll:hover {
-  width: 12%;
+  width: 160px;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -376,7 +376,7 @@ body {
           animation: navAfter 500ms forwards;
 }
 
-.categoryList {
+.categoryList, .categoryListMenu {
   width: 20%;
   max-width: 200px;
   background-color: rgb(21, 21, 21);
@@ -401,25 +401,28 @@ body {
   top: 60px;
   z-index: 10000;
 }
-@media screen and (max-width: 750px) {
-  .categoryList {
-    display: none;
-  }
-}
-.categoryList p {
+.categoryList p, .categoryListMenu p {
   border-bottom: 1px solid;
   width: 80%;
+  font-weight: 500;
   text-align: center;
   padding: 0 0 10px;
   -webkit-transition: 300ms;
   transition: 300ms;
   cursor: pointer;
 }
-.categoryList p:hover {
+.categoryList p:hover, .categoryListMenu p:hover {
   width: 90%;
   color: #dd9853;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.categoryListMenu {
+  border-left: 1px solid;
+  top: 35%;
+  left: 60%;
+  z-index: 20000000000;
 }
 
 .cartNumber {
