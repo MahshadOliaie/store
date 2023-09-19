@@ -10,3 +10,4 @@ let isFirstPage;
 let category = document.querySelectorAll(".category");
 let categoryList = document.querySelector(".categoryList")
 let categoryMenu = document.querySelectorAll(".categoryMenu")
+let navItems = document.querySelectorAll(".header__nav p:not(#login)")

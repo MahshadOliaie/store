@@ -10,6 +10,8 @@ function render(data, firstPage) {
     debugger
     if (firstPage) {
         data = data.slice(0, 4)
+    }else{
+        // data = data.slice(0, 9)
     }
 
     let template = data.map(product => {
@@ -75,23 +77,46 @@ function reload() {
 }
 
 
-function showList(){
+function showList() {
     document.querySelector(".categoryList").classList.toggle("show")
 }
 
 
-
-bars.addEventListener("click", function () {
+function showbar() {
     document.querySelector(".menu").classList.toggle("show")
     document.querySelector(".categoryList").classList.remove("show")
-})
-
-
-for (const item of categoryMenu) {
-    item.addEventListener("click", function () {
-        document.querySelector(".categoryList").classList.add("categoryListMenu");
-    }
-    )
 }
+
+
+
+
+function menuEventAdder() {
+    for (const item of categoryMenu) {
+        item.addEventListener("click", function () {
+            document.querySelector(".categoryList").classList.add("categoryListMenu");
+        }
+        )
+    }
+}
+
+
+// function currentNavItem(e){
+//     for (const item of navItems) {
+//         item.classList.remove("current")
+//     }
+
+//     e.target.classList.add("current")
+// }
+
+
+// function navItemsEvent(){
+//     for (const item of navItems) {
+//         item.addEventListener("click" , currentNavItem)
+//     }
+// }
+
+
+menuEventAdder();
+// navItemsEvent();
 
 
