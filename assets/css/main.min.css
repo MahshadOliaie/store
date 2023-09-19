@@ -303,14 +303,14 @@ body {
     left: 0;
   }
 }
-#login {
+#login, #loginMenu {
   border: 1px solid white;
   padding: 10px;
   -webkit-transition: 300ms;
   transition: 300ms;
   cursor: pointer;
 }
-#login:hover {
+#login:hover, #loginMenu:hover {
   background-color: #dd9853;
   color: black;
   border-color: black;
@@ -336,7 +336,7 @@ body {
   z-index: 200000000;
   top: 0;
   margin-top: 60px;
-  background-color: rgb(57, 57, 57);
+  background-color: rgb(21, 21, 21);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,22 +361,65 @@ body {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.menu p:not(#login):hover::after {
+.menu p:hover {
+  color: #dd9853;
+}
+.menu p:not(#loginMenu):hover::after {
   content: "";
   width: 100%;
   height: 1px;
   position: absolute;
-  background-color: white;
+  background-color: #dd9853;
   bottom: 0;
   left: -100%;
   -webkit-animation: navAfter 500ms forwards;
           animation: navAfter 500ms forwards;
 }
 
-.show {
+.categoryList {
+  width: 20%;
+  max-width: 200px;
+  background-color: rgb(21, 21, 21);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+  position: fixed;
+  right: 200px;
+  display: none;
+  overflow: hidden;
+  top: 60px;
+  z-index: 10000;
+}
+@media screen and (max-width: 750px) {
+  .categoryList {
+    display: none;
+  }
+}
+.categoryList p {
+  border-bottom: 1px solid;
+  width: 80%;
+  text-align: center;
+  padding: 0 0 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+.categoryList p:hover {
+  width: 90%;
+  color: #dd9853;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .cartNumber {
@@ -403,6 +446,12 @@ body {
 .cartPack {
   position: relative;
   margin-right: 15px;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .carts {

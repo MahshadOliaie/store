@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fake store api</title> 
+    <title>fake store api</title>
     <script src="./assets/js/domNodes.js" defer></script>
     <script src="./assets/js/requests.js" defer></script>
     <script src="./assets/js/renders.js" defer></script>
     <script src="./assets/js/cart.js" defer></script>
     <script src="./assets/js/showAll.js" defer></script>
-   
+    <script src="./assets/js/category.js" defer></script>
+
     <link rel="stylesheet" href="./assets/css/main.min.css">
 </head>
 
@@ -28,9 +29,9 @@
 
         <nav class="header__nav">
             <p onclick="reload()">HOME</p>
-            <p>CATEGORY</p>
+            <p id="category" onclick="getCategories()">CATEGORY</p>
             <div class="cartPack">
-                <p id="cart" onclick="cartReq()">CART </p>
+                <p id="cart" onclick="cartReq()">CART</p>
                 <div class="cartNumber"></div>
             </div>
             <p id="login">LOG IN</p>
@@ -48,11 +49,15 @@
 
     <section class="menu">
         <p onclick="reload()">HOME</p>
-        <p>CATEGORY</p>
-        <p id="cartMenu" onclick="cartReq()">CART
-        <div class="cartNumber"></div>
-        </p>
+        <p onclick="getCategories()">CATEGORY</p>
+        <div class="cartPack">
+            <p id="cartMenu" onclick="cartReq()">CART </p>
+            <div class="cartNumber"></div>
+        </div>
         <p id="loginMenu">LOG IN</p>
+    </section>
+
+    <section class="categoryList">
     </section>
 
 

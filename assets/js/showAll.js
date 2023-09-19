@@ -14,7 +14,7 @@ function pageStatefn() {
 
     <nav class="header__nav">
         <p onclick="reload()">HOME</p>
-        <p>CATEGORY</p>
+        <p onclick="getCategories()">CATEGORY</p>
         <div class="cartPack">
             <p id="cart" onclick="cartReq()">CART </p>
             <div class="cartNumber">${cartLength}</div>
@@ -25,7 +25,7 @@ function pageStatefn() {
 
 <section class="menu">
         <p onclick="reload()">HOME</p>
-        <p>CATEGORY</p>
+        <p onclick="getCategories()">CATEGORY</p>
         <p id="cartMenu" onclick="cartReq()">CART
         <div class="cartNumber"></div>
         </p>

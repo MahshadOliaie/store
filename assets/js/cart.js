@@ -50,7 +50,10 @@ function cartNumberfn() {
         .then(Response => Response.json())
         .then(carts => {
             cartLength = carts.length;
-            cartCount.textContent = cartLength
+            for (const item of cartCount) {
+                item.textContent = cartLength
+            }
+
         });
 
 }

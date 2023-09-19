@@ -24,7 +24,7 @@ function products(id, firstPage) {
 
 function cartReq() {
     let all = [];
-    
+
     fetch(`https://fakestoreapi.com/products`)
         .then(Response => Response.json())
         .then(data => all = data);
@@ -35,3 +35,9 @@ function cartReq() {
 }
 
 
+
+function getCategories() {
+    fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(json => renderCategory(json))
+}

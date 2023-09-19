@@ -65,7 +65,7 @@
 
 
 
-#login {
+#login , #loginMenu {
     border: 1px solid white;
     padding: 10px;
     transition: 300ms;
@@ -98,7 +98,7 @@
     z-index: 200000000;
     top: 0;
     margin-top: 60px;
-    background-color: rgb(57, 57, 57);
+    background-color: rgb(21, 21, 21);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,12 +113,17 @@
         cursor: pointer;
         transition: 500ms;
 
-        &:not(#login):hover::after {
+        &:hover{
+            color: $brown;
+        }
+
+
+        &:not(#loginMenu):hover::after {
             content: "";
             width: 100%;
             height: 1px;
             position: absolute;
-            background-color: white;
+            background-color: $brown;
             bottom: 0;
             left: -100%;
             animation: navAfter 500ms forwards;
@@ -129,9 +134,45 @@
 
 
 
-.show {
+.categoryList{
+    width: 20%;
+    max-width: 200px;
+    background-color: rgb(21, 21, 21);
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    position: fixed;
+    right: 200px;
+    display: none;
+    overflow: hidden;
+    top: 60px;
+    z-index: 10000;
+
+    @media screen and (max-width:750px) {
+        display: none;
+    }
+
+    & p{
+        border-bottom: 1px solid;
+        width: 80%;
+        text-align: center;
+        padding: 0 0 10px;
+        transition: 300ms;
+        cursor: pointer;
+
+        &:hover{
+            width: 90%;
+            color: $brown;
+            transition: 300ms;
+        }
+    }
+
+    
 }
+
+
 
 
 .cartNumber {
@@ -153,3 +194,15 @@
     position: relative;
     margin-right: 15px
 }
+
+
+
+
+
+
+
+
+.show {
+    display: flex;
+}
+

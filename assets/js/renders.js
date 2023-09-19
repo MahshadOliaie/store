@@ -81,3 +81,8 @@ bars.addEventListener("click", function () {
     document.querySelector(".menu").classList.toggle("show")
 })
 
+
+category.addEventListener("click", function () {
+    document.querySelector(".categoryList").classList.toggle("show")
+})
+
