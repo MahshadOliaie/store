@@ -17,7 +17,7 @@ function pageStatefn() {
         <p>CATEGORY</p>
         <div class="cartPack">
             <p id="cart">CART </p>
-            <div class="cartNumber"></div>
+            <div class="cartNumber">${cartLength}</div>
         </div>
         <p id="login">LOG IN</p>
     </nav>
@@ -37,9 +37,10 @@ function pageStatefn() {
 
 
 
-function showAllfn() {
-     products(null, false)
-    //  pageStatefn()
+async function showAllfn() {
+    await products(null, false)
+    cartNumberfn()
+    pageStatefn()
 }
 
 

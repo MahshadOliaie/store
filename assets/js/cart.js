@@ -15,7 +15,7 @@ function cartFn(carts, all) {
 
 function cartsRender(data) {
     let template = data.map(item => {
-        const { title, image, price, category, rating} = item;
+        const { title, image, price, category, rating } = item;
 
         return ` <svg xmlns="http://www.w3.org/2000/svg" class="back" height="1em" viewBox="0 0 320 512"
         onclick="products(null , isFirstPage)"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -38,3 +38,20 @@ function cartsRender(data) {
 
     root.innerHTML = template;
 }
+
+
+
+
+function cartNumberfn() {
+
+    fetch(`https://fakestoreapi.com/carts`)
+        .then(Response => Response.json())
+        .then(carts => {
+            cartLength = carts.length;
+            cartCount.textContent = cartLength
+        });
+
+}
+
+
+window.addEventListener("load", cartNumberfn)

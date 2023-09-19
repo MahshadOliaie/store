@@ -1,18 +1,23 @@
 
 
-function products(id , firstPage) {
+function products(id, firstPage) {
+    console.trace("call api")
     if (id) {
-        fetch(`https://fakestoreapi.com/products/${id}`)
+        return fetch(`https://fakestoreapi.com/products/${id}`)
             .then(Response => Response.json())
-            .then(data => showProduct(data , firstPage));
+            .then(data => {
+                isFirstPage = firstPage;
+                showProduct(data, firstPage);
+            })
     }
     else {
-        fetch(`https://fakestoreapi.com/products`)
+        return fetch(`https://fakestoreapi.com/products`)
             .then(Response => Response.json())
-            .then(data => render(data , firstPage));
+            .then(data => {
+                isFirstPage = firstPage;
+                render(data, firstPage)
+            });
     }
-
-    isFirstPage = firstPage;
 
 }
 

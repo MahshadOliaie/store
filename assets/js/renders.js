@@ -67,18 +67,6 @@ products(null, true);
 
 
 
-function cartNumberfn() {
-    fetch(`https://fakestoreapi.com/carts`)
-        .then(Response => Response.json())
-        .then(carts => length(carts));
-
-    function length(carts) {
-        cartCount.textContent = carts.length
-    }
-
-}
-
-cartNumberfn()
 
 
 
