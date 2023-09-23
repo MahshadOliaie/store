@@ -12,6 +12,5 @@ function renderCategory(data){
 
 
 function showCategoryItems(data){
-    render(data, false);
-    pageStatefn()
+    render(data, false , "1");
 }

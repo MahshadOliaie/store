@@ -527,4 +527,31 @@ body {
           transform: scale(1.05);
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.pages {
+  width: 120px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: scroll;
+  padding-left: 10px;
+}
+.pages p {
+  padding: 7px 15px;
+}
+.pages p:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.currentPage {
+  background-color: #dd9853;
+  font-size: 16px;
 }/*# sourceMappingURL=main.min.css.map */

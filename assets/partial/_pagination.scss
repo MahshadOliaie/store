@@ -1,0 +1,26 @@
+
+
+.pages{
+    width: 120px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    padding-left: 10px;
+     
+    & p {
+        padding: 7px 15px;
+
+        &:not(:last-child){
+            border-right: 1px solid black;
+        }
+    }
+}
+
+
+
+.currentPage{
+    background-color: $brown;
+    font-size: 16px;
+}

@@ -1,6 +1,6 @@
 
 
-function products(id, firstPage) {
+function products(id, firstPage ,page=1) {
     if (id) {
         return fetch(`https://fakestoreapi.com/products/${id}`)
             .then(Response => Response.json())
@@ -14,7 +14,7 @@ function products(id, firstPage) {
             .then(Response => Response.json())
             .then(data => {
                 isFirstPage = firstPage;
-                render(data, firstPage)
+                render(data, firstPage ,page)
             });
     }
 

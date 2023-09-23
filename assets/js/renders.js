@@ -1,17 +1,19 @@
 
 
 
-function render(data, firstPage) {
+function render(data, firstPage , page) {
     root.classList.remove("carts")
     root.classList.remove("showProduct");
     root.classList.add("allProducts");
     document.querySelector(".menu").classList.remove("show");
 
-    debugger
     if (firstPage) {
         data = data.slice(0, 4)
     }else{
-        // data = data.slice(0, 9)
+        let count = data.length;
+        let pages = Math.ceil(count/perPage)
+        renderPaginate(pages)
+        data = data.slice(((page-1)*perPage), (page*perPage))
     }
 
     let template = data.map(product => {

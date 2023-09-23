@@ -1,6 +1,7 @@
 
 
-function pageStatefn() {
+function pageStatefn(pagination) {
+    debugger
     let template = root.outerHTML;
     document.body.innerHTML = ` <header class="header">
     <div class="header__logo">LOGOOO</div>
@@ -37,11 +38,15 @@ function pageStatefn() {
 
     <section class="categoryList">
     </section>
-`+ template;
+`+ template + `<div class="pages">
+${pagination}
+</div>
+`;
 
     root = document.querySelector(".root");
     categoryList = document.querySelector(".categoryList")
     categoryMenu = document.querySelectorAll(".categoryMenu")
+    document.getElementById(currentPage).classList.add("currentPage");
     menuEventAdder()
     // navItemsEvent()
 
@@ -49,10 +54,11 @@ function pageStatefn() {
 
 
 
+
 async function showAllfn() {
     await products(null, false)
     cartNumberfn()
-    pageStatefn()
+    // pageStatefn()
 }
 
 
