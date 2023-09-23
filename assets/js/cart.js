@@ -17,11 +17,11 @@ function cartFn(carts, all) {
 
 function cartsRender(data) {
     let template = data.map(item => {
-        const { title, image, price, category, rating } = item;
+        const { title, id , image, price, category, rating } = item;
 
         return `<div class="carts__cart">
         <div class="carts__cart__image">
-            <img src="${image}" alt="">
+            <img src="${image}" alt="" onclick="products(${id})">
         </div>
         <div class="carts__cart__about">
             <h2 class="carts__cart__about__title">${title}</h2>

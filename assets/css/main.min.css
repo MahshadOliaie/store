@@ -554,4 +554,135 @@ body {
 .currentPage {
   background-color: #dd9853;
   font-size: 16px;
+}
+
+.off {
+  width: 70%;
+  margin: 5% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+.off > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: last baseline;
+      -ms-flex-align: last baseline;
+          align-items: last baseline;
+}
+@media screen and (max-width: 1000px) {
+  .off > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 630px) {
+  .off > div {
+    position: absolute;
+  }
+}
+.off p {
+  font-size: 50px;
+  color: rgb(33, 33, 33);
+  text-align: right;
+}
+@media screen and (max-width: 1000px) {
+  .off p {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .off p {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .off p {
+    color: rgb(255, 255, 255);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+}
+.off__percent {
+  font-size: 70px;
+  color: #dd9853;
+}
+@media screen and (max-width: 1000px) {
+  .off__percent {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .off__percent {
+    font-size: 40px;
+  }
+}
+.off button {
+  margin-left: 5%;
+  width: 140px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #dd9853;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border: none;
+}
+.off button:hover {
+  width: 160px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.off img {
+  width: 40%;
+  margin-right: 15px;
+}
+@media screen and (max-width: 630px) {
+  .off img {
+    width: 100%;
+  }
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1;
+}
+
+.cate {
+  font-size: 20px;
+  display: block;
 }/*# sourceMappingURL=main.min.css.map */
