@@ -14,3 +14,4 @@ let navItems = document.querySelectorAll(".header__nav p:not(#login)")
 let perPage = 12;
 let page = 1;
 let currentPage = "1";
+let deletedCarts = [];

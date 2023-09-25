@@ -462,6 +462,9 @@ body {
   position: absolute;
   top: 0;
   z-index: 1009;
+  height: 100vh;
+  overflow: scroll;
+  position: fixed;
   background-color: white;
 }
 .carts__cart {
