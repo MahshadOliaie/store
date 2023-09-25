@@ -34,6 +34,11 @@ body {
   transition: 500ms;
 }
 
+button {
+  text-decoration: none;
+  color: inherit;
+}
+
 .allProducts {
   width: 75%;
   display: grid;
