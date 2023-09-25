@@ -1,10 +1,9 @@
 .carts {
     margin-top: 60px;
     width: 100%;
-    position: absolute;
     top: 0;
     z-index: 1009;
-    height: 100vh;
+    height: calc(100vh - 60px);
     overflow: scroll;
     position: fixed;
     background-color: white;
