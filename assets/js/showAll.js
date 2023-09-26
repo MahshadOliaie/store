@@ -46,7 +46,11 @@ ${pagination}
     root = document.querySelector(".root");
     categoryList = document.querySelector(".categoryList")
     categoryMenu = document.querySelectorAll(".categoryMenu")
+    cartCount = document.querySelectorAll(".cartNumber");
     document.getElementById(currentPage).classList.add("currentPage");
+    for (const item of cartCount) {
+        item.textContent = cartProducts.length
+    }
     menuEventAdder()
 
 }
@@ -55,8 +59,12 @@ ${pagination}
 
 
 async function showAllfn() {
+    debugger
     await products(null, false)
-    cartNumberfn()
+    for (const item of cartCount) {
+        item.textContent = cartProducts.length
+    }
+
 }
 
 

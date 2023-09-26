@@ -2,6 +2,7 @@
 
 
 function render(data, firstPage , page) {
+    debugger
     root.classList.remove("carts")
     root.classList.remove("showProduct");
     root.classList.add("allProducts");
@@ -56,7 +57,7 @@ function showProduct(data, firstPage) {
     <p class="root__aboutProduct__categoryProduct">category: ${category}</p>
     <p class="root__aboutProduct__ratingProduct">rate: ${rating.rate}</p>
     <p class="root__aboutProduct__priceProduct">price: ${price} $</p>
-    <button class="root__aboutProduct__shop ${(cartProducts.includes(id))? ' added"> ADDED' : '"> ADD TO CART'}</button>
+    <button onclick="addToCart(${id})" class="root__aboutProduct__shop ${(cartProducts.includes(id))? ' added"> ADDED' : '"> ADD TO CART'}</button>
 </div>`;
 
 

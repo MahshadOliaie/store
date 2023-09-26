@@ -1,6 +1,7 @@
 
 
 function cartFn(carts, all) {
+    debugger
     document.querySelector(".menu").classList.remove("show")
     let ids = [];
     carts.map(item => ids.push(item.id));
@@ -9,12 +10,25 @@ function cartFn(carts, all) {
         ids = ids.filter(item => !deletedCarts.includes(item))
     }
 
-    all = all.filter(obj => ids.includes(obj.id));
-    for (const item of cartCount) {
-        item.textContent = all.length
+
+    let difference = []
+
+    cartProducts.map(item => {
+        if (!ids.includes(item)) {
+            difference.push(item)
+        }
+    })
+
+    if (difference.length > 0) {
+        ids = ids.concat(difference);
     }
 
     cartProducts = ids;
+
+    all = all.filter(obj => ids.includes(obj.id));
+    for (const item of cartCount) {
+        item.textContent = cartProducts.length
+    }
 
     root = document.querySelector(".root");
     root.classList.remove("allProducts")
@@ -56,21 +70,42 @@ function cartsRender(data) {
 
 
 
+function addToCart(id) {
+    cartProducts.push(id)
+    event.target.classList.add("added");
+    event.target.textContent = "ADDED"
+    for (const item of cartCount) {
+        item.textContent = cartProducts.length
+    }
+
+}
 
 
-function cartNumberfn() {
+
+function deleteCartReq(id) {
+    deletedCarts.push(id)
+    cartProducts.splice(cartProducts.indexOf(id), 1)
+    cartReq()
+
+}
+
+
+
+
+function cartNumberfnReq() {
 
     fetch(`https://fakestoreapi.com/carts`)
         .then(Response => Response.json())
         .then(carts => {
-            cartLength = carts.length;
+            if (cartProducts.length == 0) {
+                carts.map(item => {
+                    cartProducts.push(item.id)
+                })
+            }
 
-            carts.map(item => {
-                cartProducts.push(item.id)
-            })
 
             for (const item of cartCount) {
-                item.textContent = cartLength
+                item.textContent = cartProducts.length
             }
 
         });
@@ -78,4 +113,4 @@ function cartNumberfn() {
 }
 
 
-window.addEventListener("load", cartNumberfn)
+window.addEventListener("load", cartNumberfnReq)

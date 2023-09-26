@@ -1,6 +1,6 @@
 
 
-function products(id, firstPage ,page=1) {
+function products(id, firstPage, page = 1) {
     if (id) {
         return fetch(`https://fakestoreapi.com/products/${id}`)
             .then(Response => Response.json())
@@ -14,7 +14,7 @@ function products(id, firstPage ,page=1) {
             .then(Response => Response.json())
             .then(data => {
                 isFirstPage = firstPage;
-                render(data, firstPage ,page)
+                render(data, firstPage, page)
             });
     }
 
@@ -56,11 +56,3 @@ function getCategories(oneCategory) {
 
 
 
-function deleteCartReq(id){
-    fetch(`https://fakestoreapi.com/carts/${id}`,{
-            method:"DELETE"
-        })
-            .then(res=>res.json())
-            .then(json=> deletedCarts.push(json.id))
-            .then(()=> cartReq())
-}
