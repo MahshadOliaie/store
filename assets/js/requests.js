@@ -57,7 +57,6 @@ function getCategories(oneCategory) {
 
 
 function deleteCartReq(id){
-    debugger
     fetch(`https://fakestoreapi.com/carts/${id}`,{
             method:"DELETE"
         })

@@ -2,7 +2,6 @@
 
 function cartFn(carts, all) {
     document.querySelector(".menu").classList.remove("show")
-    debugger
     let ids = [];
     carts.map(item => ids.push(item.id));
 
@@ -11,6 +10,9 @@ function cartFn(carts, all) {
     }
 
     all = all.filter(obj => ids.includes(obj.id));
+    for (const item of cartCount) {
+        item.textContent = all.length
+    }
     root = document.querySelector(".root");
     root.classList.remove("allProducts")
     root.classList.remove("showProduct")
