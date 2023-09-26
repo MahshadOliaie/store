@@ -48,7 +48,6 @@ ${pagination}
     categoryMenu = document.querySelectorAll(".categoryMenu")
     document.getElementById(currentPage).classList.add("currentPage");
     menuEventAdder()
-    // navItemsEvent()
 
 }
 
@@ -58,7 +57,6 @@ ${pagination}
 async function showAllfn() {
     await products(null, false)
     cartNumberfn()
-    // pageStatefn()
 }
 
 

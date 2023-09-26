@@ -15,3 +15,4 @@ let perPage = 12;
 let page = 1;
 let currentPage = "1";
 let deletedCarts = [];
+let cartProducts = [];

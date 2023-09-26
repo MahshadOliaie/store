@@ -536,6 +536,11 @@ button {
   transition: 300ms;
 }
 
+.added {
+  background-color: #dd9853;
+  pointer-events: none;
+}
+
 .pages {
   width: 120px;
   margin: 50px auto;
