@@ -1,0 +1,76 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    color: rgb(74, 74, 74);
+
+    &__informaition {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &__column {
+            display: flex;
+            flex-direction: column;
+
+            width: 22%;
+        }
+    }
+
+    & p {
+        font-size: 13px;
+        margin: 0;
+    }
+
+    & a {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    & h3{
+        margin-bottom: 10px;
+    }
+
+
+    &__media{
+        border-top: 1px solid rgb(37, 37, 37);
+        width: 70%;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.one{
+    margin-right: 3%;
+}
+
+.four{
+    padding-top: 10%;
+}
+
+.contact{
+    line-height: 2;
+}
+
+#email{
+    background-color: rgb(53, 53, 53);
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+
+    &:focus-visible{
+        outline: 1px solid $brown;
+    }
+}
+
+#submit{
+    width: 100px;
+    border: none;
+    background-color: $brown;
+    padding: 8px 5px;
+}

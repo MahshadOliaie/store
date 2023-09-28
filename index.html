@@ -103,21 +103,57 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-   <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 
+    <footer class="footer">
+        <div class="footer__informaition">
+            <div class="footer__informaition__column one">
+                <h2>LOGOOO</h2>
+                <br>
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem rerum amet eius! Numquam
+                    saepe culpa.</p>
+                <br>
+                <h3>Contact Us</h3>
+                <p class="contact"> <span>ax</span>+91 9999 999 999</p>
+                <p class="contact"><span>ax</span>youremail@email.com</p>
+            </div>
+            <div class="footer__informaition__column">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Events</a>
+                <a href="#">More Search</a>
+            </div>
+            <div class="footer__informaition__column">
+                <h3>Helpful Links</h3>
+                <a href="#">Services</a>
+                <a href="#">Supports</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer__informaition__column four">
+                <h4>Subscribe For More</h4>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                <input type="submit" id="submit" value="subscribe">
+            </div>
+        </div>
+        <div class="footer__media">
+        </div>
+    </footer>
 </body>
 
 </html>
