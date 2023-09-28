@@ -13,6 +13,9 @@
     <script src="./assets/js/category.js" defer></script>
     <script src="./assets/js/pagination.js" defer></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
     <link rel="stylesheet" href="./assets/css/main.min.css">
 </head>
 
@@ -39,7 +42,31 @@
         </nav>
     </header>
 
-    <section class="slider"></section>
+    <!-- <div class="swiper mySwiper slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./assets/images/clothing rack_.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/images/Unknown-2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/images/✧ pinterest_ positividy ✧.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div> -->
+
+    <div class="swiper mySwiper slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./assets/images/clothes.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/electronics.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/jwelery.jpg" />
+            </div>
+        </div>
+        <div class="swiper-button-next" style="color: #dd9853;"></div>
+        <div class="swiper-button-prev" style="color: #dd9853;"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- </div> -->
 
 
     <section class="root">
@@ -63,21 +90,42 @@
 
 
     <section class="off">
-       <img src="./assets/images/tech.jpg" alt="">
-      <div> <div class="content">
-        <p>UP TO <span class="off__percent">25%</span> OFF <span class="cate">ELECTRONICS</span></p>
-       </div>
-       <button onclick="showCategory('electronics')">SHOP NOW</button></div>
+        <img src="./assets/images/tech.jpg" alt="">
+        <div>
+            <div class="content">
+                <p>UP TO <span class="off__percent">25%</span> OFF <span class="cate">ELECTRONICS</span></p>
+            </div>
+            <button onclick="showCategory('electronics')">SHOP NOW</button>
+        </div>
     </section>
 
 
     <section class="aboutUs">
         <div class="about">
             <h2 class="about__title">ABOUT THE BRAND</h2>
-            <p class="about__body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aliquid dolore reprehenderit at maxime asperiores incidunt commodi aliquam fuga aspernatur, odit, vero magnam animi nihil totam optio quam quidem. Eaque.</p>
+            <p class="about__body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aliquid dolore
+                reprehenderit at maxime asperiores incidunt commodi aliquam fuga aspernatur, odit, vero magnam animi
+                nihil totam optio quam quidem. Eaque.</p>
             <p class="about__more">READ MORE</p>
         </div>
     </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 
 </body>
 
