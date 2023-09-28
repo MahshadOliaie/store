@@ -19,7 +19,7 @@ function render(data, firstPage , page) {
     let template = data.map(product => {
         const { title, image, price, id } = product;
 
-        return `<div class="root__card" onclick="products(${id} , ${firstPage})">
+        return `<div class="root__card" onclick="routeShowProduct(${id} , ${firstPage})">
         <div class="root__card__image">
             <img src="${image}" alt="">
         </div>
@@ -34,6 +34,12 @@ function render(data, firstPage , page) {
     root.innerHTML = template;
 
 
+}
+
+
+function routeShowProduct(id , firstPage){
+    history.pushState({},"","details/"+id)
+    products(id , firstPage)
 }
 
 
@@ -58,7 +64,6 @@ function showProduct(data, firstPage) {
     <button onclick="addToCart(${id})" class="root__aboutProduct__shop ${(cartProducts.includes(id))? ' added"> ADDED' : '"> ADD TO CART'}</button>
 </div>`;
 
-history.pushState({},"",title)
 
 }
 
@@ -125,6 +130,11 @@ function handleRoute(){
     if(pathname.includes("category")){
         let newPathname = pathname.replaceAll("category/", "").replace("%20" , " ").replace("/","")
         getCategories(newPathname)
+    }
+
+    if(pathname.includes("details/")){
+        let newPathname = pathname.replaceAll("/details/", "")
+        products(newPathname)
     }
 }
 
