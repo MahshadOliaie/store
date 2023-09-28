@@ -46,6 +46,9 @@ ${pagination}
     categoryList = document.querySelector(".categoryList")
     categoryMenu = document.querySelectorAll(".categoryMenu")
     cartCount = document.querySelectorAll(".cartNumber");
+    if (!pagination.includes(currentPage)) {
+        currentPage = "1"
+    }
     document.getElementById(currentPage).classList.add("currentPage");
     for (const item of cartCount) {
         item.textContent = cartProducts.length
@@ -58,7 +61,7 @@ ${pagination}
 
 
 async function showAllfn(page) {
-    await products(null, false , page)
+    await products(null, false, page)
     for (const item of cartCount) {
         item.textContent = cartProducts.length
     }
