@@ -37,7 +37,6 @@ function cartReq() {
 
 
 function getCategories(oneCategory) {
-
     if (oneCategory) {
         fetch(`https://fakestoreapi.com/products/category/${oneCategory}`)
             .then(res => res.json())

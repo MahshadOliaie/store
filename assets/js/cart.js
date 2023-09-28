@@ -1,7 +1,6 @@
 
 
 function cartFn(carts, all) {
-    debugger
     document.querySelector(".menu").classList.remove("show")
     let ids = [];
     carts.map(item => ids.push(item.id));
@@ -111,6 +110,13 @@ function cartNumberfnReq() {
         });
 
 }
+
+
+function cartPushState() {
+    history.pushState({}, "", "cart")
+    cartReq();
+}
+
 
 
 window.addEventListener("load", cartNumberfnReq)

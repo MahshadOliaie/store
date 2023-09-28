@@ -1,7 +1,6 @@
 
 
 function pageStatefn(pagination) {
-    debugger
     let template = root.outerHTML;
     document.body.innerHTML = ` <header class="header">
     <div class="header__logo">LOGOOO</div>
@@ -17,7 +16,7 @@ function pageStatefn(pagination) {
         <p onclick="reload()">HOME</p>
         <p onclick="getCategories()" class="category">CATEGORY</p>
         <div class="cartPack">
-            <p id="cart" onclick="cartReq()">CART </p>
+            <p id="cart" onclick="cartPushState()">CART </p>
             <div class="cartNumber">${cartLength}</div>
         </div>
         <p id="login">LOG IN</p>
@@ -28,7 +27,7 @@ function pageStatefn(pagination) {
     <p onclick="reload()">HOME</p>
     <p onclick="getCategories()" class="categoryMenu">CATEGORY</p>
     <div class="cartPack">
-        <p id="cartMenu" onclick="cartReq()">CART </p>
+        <p id="cartMenu" onclick="cartPushState()">CART </p>
         <div class="cartNumber">${cartLength}</div>
     </div>
     <p id="loginMenu">LOG IN</p>
@@ -58,9 +57,8 @@ ${pagination}
 
 
 
-async function showAllfn() {
-    debugger
-    await products(null, false)
+async function showAllfn(page) {
+    await products(null, false , page)
     for (const item of cartCount) {
         item.textContent = cartProducts.length
     }
@@ -68,4 +66,10 @@ async function showAllfn() {
 }
 
 
-showAll.addEventListener("click", showAllfn)
+function showAllRoute() {
+    history.pushState({}, "", "AllProducts")
+    showAllfn();
+}
+
+
+showAll.addEventListener("click", showAllRoute)

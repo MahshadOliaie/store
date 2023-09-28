@@ -2,7 +2,6 @@
 
 
 function render(data, firstPage , page) {
-    debugger
     root.classList.remove("carts")
     root.classList.remove("showProduct");
     root.classList.add("allProducts");
@@ -43,7 +42,6 @@ function showProduct(data, firstPage) {
     root.classList.add("showProduct");
     root.classList.remove("allProducts");
 
-    debugger
 
     const { title,id , image, price, category, rating, description } = data;
 
@@ -60,6 +58,7 @@ function showProduct(data, firstPage) {
     <button onclick="addToCart(${id})" class="root__aboutProduct__shop ${(cartProducts.includes(id))? ' added"> ADDED' : '"> ADD TO CART'}</button>
 </div>`;
 
+history.pushState({},"",title)
 
 }
 
@@ -108,3 +107,26 @@ function menuEventAdder() {
 menuEventAdder();
 
 
+function handleRoute(){
+    const pathname = location.pathname;
+
+    if(pathname=="/"){
+        window.location.reload(true);
+    }
+
+    if(pathname=="/AllProducts"){
+        showAllfn(currentPage);
+    }
+
+    if(pathname=="/cart"){
+        cartReq();
+    }
+
+    if(pathname.includes("category")){
+        let newPathname = pathname.replaceAll("category/", "").replace("%20" , " ").replace("/","")
+        getCategories(newPathname)
+    }
+}
+
+
+window.addEventListener("popstate" , handleRoute)
