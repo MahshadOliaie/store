@@ -797,6 +797,11 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 700px) {
+  .footer__informaition {
+    display: none;
+  }
+}
 .footer__informaition__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -831,6 +836,20 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+.footer__media svg {
+  font-size: 25px;
+  fill: rgb(74, 74, 74);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.footer__media svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .one {
@@ -843,6 +862,11 @@ a {
 
 .contact {
   line-height: 2;
+}
+.contact svg {
+  margin-right: 10px;
+  margin-bottom: -3px;
+  fill: rgb(74, 74, 74);
 }
 
 #email {

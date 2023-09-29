@@ -11,6 +11,10 @@
         align-items: flex-start;
         justify-content: space-between;
 
+        @media screen and (max-width:700px) {
+            display: none;
+        }
+
         &__column {
             display: flex;
             flex-direction: column;
@@ -29,48 +33,68 @@
         line-height: 1.9;
     }
 
-    & h3{
+    & h3 {
         margin-bottom: 10px;
     }
 
 
-    &__media{
+    &__media {
         border-top: 1px solid rgb(37, 37, 37);
         width: 70%;
         margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top: 20px;
+        gap: 20px;
+
+        & svg{
+            font-size: 25px;
+            fill: rgb(74, 74, 74);
+            transition: 300ms;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: 300ms;
+            }
+        }
     }
 }
 
-.one{
+.one {
     margin-right: 3%;
 }
 
-.four{
+.four {
     padding-top: 10%;
 }
 
-.contact{
+.contact {
     line-height: 2;
+
+    & svg {
+        margin-right: 10px;
+        margin-bottom: -3px;
+        fill: rgb(74, 74, 74);
+    }
 }
 
-#email{
+#email {
     background-color: rgb(53, 53, 53);
     border: none;
     padding: 10px;
     color: white;
     margin-bottom: 10px;
 
-    &:focus-visible{
+    &:focus-visible {
         outline: 1px solid $brown;
     }
 }
 
-#submit{
+#submit {
     width: 100px;
     border: none;
     background-color: $brown;
     padding: 8px 5px;
 }
+
