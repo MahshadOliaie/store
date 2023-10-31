@@ -932,4 +932,12 @@ a {
   height: 20px;
   border-radius: 50px;
   background-color: rgb(214, 214, 214);
+}
+
+.categoryList__skeleton {
+  width: 80%;
+  height: 10px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  background-color: rgba(214, 214, 214, 0.677);
 }/*# sourceMappingURL=main.min.css.map */

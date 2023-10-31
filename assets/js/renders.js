@@ -40,6 +40,13 @@ function routeShowProduct(id , firstPage){
 
 
 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+
 function showProduct(data, firstPage) {
     root.classList.add("showProduct");
     root.classList.remove("allProducts");

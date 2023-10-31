@@ -1,23 +1,22 @@
-
-.root__card{
-    &__skeleton{
+.root__card {
+    &__skeleton {
         background-color: transparent;
     }
 
-    &__image__skeleton{
+    &__image__skeleton {
         height: 12rem;
         width: 100%;
         background-color: rgb(214, 214, 214);
     }
 
-    &__about__title__skeleton{
+    &__about__title__skeleton {
         width: 60%;
         height: 20px;
         border-radius: 50px;
         background-color: rgb(214, 214, 214);
     }
 
-    &__about__price__skeleton{
+    &__about__price__skeleton {
         width: 20%;
         height: 20px;
         border-radius: 50px;
@@ -28,24 +27,24 @@
 
 
 
-.carts__cart{
+.carts__cart {
 
-    &__image__skeleton{
+    &__image__skeleton {
         width: 12rem;
         height: 12rem;
         background-color: rgb(214, 214, 214);
     }
 
-    &__about__remove__skeleton{
+    &__about__remove__skeleton {
         background-color: rgb(214, 214, 214);
         width: 30%;
     }
 
-    &__about__skeleton{
-       margin-left: 5rem;
+    &__about__skeleton {
+        margin-left: 5rem;
     }
 
-    &__about__title__skeleton{
+    &__about__title__skeleton {
         width: 70%;
         height: 25px;
         border-radius: 50px;
@@ -53,10 +52,22 @@
     }
 
 
-    .cartAboutskeleton{
+    .cartAboutskeleton {
         width: 30%;
         height: 20px;
         border-radius: 50px;
         background-color: rgb(214, 214, 214);
     }
+}
+
+
+
+
+
+.categoryList__skeleton {
+    width: 80%;
+    height: 10px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    background-color: rgba(214, 214, 214, 0.677);
 }

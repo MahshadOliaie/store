@@ -19,3 +19,7 @@ let cartsSkeleton = `<div class="carts__cart carts__cart__skeleton">
     <button class="carts__cart__about__remove carts__cart__about__remove__skeleton"></button>
 </div>
 </div>`;
+
+
+
+let CategorySkeleton =`<p class="categoryList__skeleton"></p><p class="categoryList__skeleton"></p><p class="categoryList__skeleton"></p><p class="categoryList__skeleton"></p>`
