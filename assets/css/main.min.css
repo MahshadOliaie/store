@@ -886,4 +886,50 @@ a {
   border: none;
   background-color: #dd9853;
   padding: 8px 5px;
+}
+
+.root__card__skeleton {
+  background-color: transparent;
+}
+.root__card__image__skeleton {
+  height: 12rem;
+  width: 100%;
+  background-color: rgb(214, 214, 214);
+}
+.root__card__about__title__skeleton {
+  width: 60%;
+  height: 20px;
+  border-radius: 50px;
+  background-color: rgb(214, 214, 214);
+}
+.root__card__about__price__skeleton {
+  width: 20%;
+  height: 20px;
+  border-radius: 50px;
+  background-color: rgb(214, 214, 214);
+}
+
+.carts__cart__image__skeleton {
+  width: 12rem;
+  height: 12rem;
+  background-color: rgb(214, 214, 214);
+}
+.carts__cart__about__remove__skeleton {
+  background-color: rgb(214, 214, 214);
+  width: 30%;
+}
+.carts__cart__about__skeleton {
+  margin-left: 5rem;
+}
+.carts__cart__about__title__skeleton {
+  width: 70%;
+  height: 25px;
+  border-radius: 50px;
+  background-color: rgb(214, 214, 214);
+}
+.carts__cart .cartAboutskeleton {
+  width: 30%;
+  height: 20px;
+  border-radius: 50px;
+  background-color: rgb(214, 214, 214);
 }/*# sourceMappingURL=main.min.css.map */

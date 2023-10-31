@@ -29,10 +29,6 @@ function cartFn(carts, all) {
         item.textContent = cartProducts.length
     }
 
-    root = document.querySelector(".root");
-    root.classList.remove("allProducts")
-    root.classList.remove("showProduct")
-    root.classList.add("carts")
     cartsRender(all);
 }
 

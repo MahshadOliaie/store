@@ -2,10 +2,6 @@
 
 
 function render(data, firstPage , page) {
-    root.classList.remove("carts")
-    root.classList.remove("showProduct");
-    root.classList.add("allProducts");
-    document.querySelector(".menu").classList.remove("show");
 
     if (firstPage) {
         data = data.slice(0, 4)
@@ -80,6 +76,9 @@ products(null, true);
 
 
 function reload() {
+    if (location.pathname !== "/") {
+        history.pushState({}, "", "/")
+    }
     window.location.reload(true);
 }
 
